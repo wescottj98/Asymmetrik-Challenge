@@ -1,0 +1,36 @@
+
+public class WordCandidate implements Candidate{
+
+	private String word;
+	private int confidence;
+	
+	public WordCandidate(String word, int confidence) {
+		this.word = word;
+		this.confidence = confidence;
+	}
+	
+	public String getWord() {
+		return word;
+	}
+	public Integer getConfidence() {
+		return new Integer(confidence);
+	}
+	
+	public void addConfidence(){
+		confidence++;
+	}
+	
+	public boolean equals(Object obj) {
+		if(this == obj) {
+			return true;
+		}
+		if(!(obj instanceof WordCandidate)) {
+			return false;
+		}
+		WordCandidate toEquate = (WordCandidate)obj;
+		if(this.getWord().equals(toEquate.getWord())) {
+			return true;
+		}
+		return false;
+	}
+}

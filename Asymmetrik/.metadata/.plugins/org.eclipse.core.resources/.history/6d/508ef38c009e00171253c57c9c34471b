@@ -1,0 +1,16 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class UnitTests {
+
+	@Test
+	public void test() {
+		AutoComplete a = new AutoComplete();
+		a.train("The third thing that I need to tell you is that this thing does not think thoroughly.");
+		System.out.println(a.getWords("thi"));
+		assertTrue(1>0);
+	}
+
+}
